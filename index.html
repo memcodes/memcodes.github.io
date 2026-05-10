@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Erick Makokha - Data Analyst & Excel Automation Specialist"/>
+    <title>Erick Makokha | Data Analyst & Excel Automation Specialist</title>
+    
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111c33;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 5%;
+            border-bottom: 1px solid #1f2937;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text);
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        .hero {
+            padding: 110px 5% 90px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            margin-bottom: 25px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 54px);
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            color: var(--accent);
+            font-size: clamp(20px, 4vw, 24px);
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto 32px;
+            color: var(--muted);
+            font-size: clamp(15.5px, 3.5vw, 17px);
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 13px 26px;
+            border: 1px solid var(--accent);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-size: 14.5px;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+
+        section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h3 {
+            font-size: clamp(24px, 5vw, 28px);
+            margin-bottom: 35px;
+            color: var(--accent);
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+
+        .tags span {
+            display: inline-block;
+            background: #1e293b;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            margin: 4px 3px;
+            color: var(--muted);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            padding: 22px 16px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #1f2937;
+        }
+
+        footer {
+            text-align: center;
+            padding: 45px 5%;
+            border-top: 1px solid #1f2937;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ================== RESPONSIVE ================== */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px 5%;
+            }
+            .hero-image img { width: 135px; height: 135px; }
+            .grid, .skills-grid { grid-template-columns: 1fr; }
+            .buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div><strong>MUKANDA E MAKOKHA </strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero" id="about">
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Mukanda E Makokha">   <!-- Change to your actual image name -->
+        </div>
+        <h1>MUKANDA E MAKOKHA</h1>
+        <h2>Data Analyst | Excel Automation Specialist | Engineer</h2>
+        <p>
+            I bridge engineering precision with advanced data analytics to build powerful automated systems, predictive models, 
+            and optimization tools that drive operational efficiency and smart decision-making.
+        </p>
+
+        <div class="buttons">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="Erick_Makokha_CV.pdf" download>Download CV</a>
+            <a class="btn btn-primary" href="#contact">Get In Touch</a>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h3>Featured Projects</h3>
+        <div class="grid">
+
+            <div class="card">
+                <h4>Premier League Prediction Models</h4>
+                <p>Built advanced predictive models using Poisson Distribution and Monte Carlo Simulation for match outcomes, corners, cards, HT/FT, and home/away performance analysis.</p>
+                <p><strong>Impact:</strong> High-accuracy forecasting system for data-driven betting and fantasy strategies.</p>
+                <div class="tags">
+                    <span>Poisson Distribution</span>
+                    <span>Monte Carlo</span>
+                    <span>Statistical Modeling</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>FPL Data Scraper & Analytics System</h4>
+                <p>Developed a complete Power Query + VBA scraper with automated data cleaning, player performance analysis, and dynamic dashboards.</p>
+                <p><strong>Impact:</strong> Streamlined Fantasy Premier League team optimization.</p>
+                <div class="tags">
+                    <span>Power Query</span>
+                    <span>Web Scraping</span>
+                    <span>Automation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Beam Analysis Tool (MDM)</h4>
+                <p>Engineered a structural analysis tool using Moment Distribution Method (MDM) that automatically generates Shear Force Diagrams (SFD) and Bending Moment Diagrams (BMD).</p>
+                <p><strong>Impact:</strong> Significantly reduced manual calculation time for civil engineers.</p>
+                <div class="tags">
+                    <span>Structural Engineering</span>
+                    <span>VBA</span>
+                    <span>Automation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Sales Dashboards & Retail Optimization</h4>
+                <p>Designed interactive sales performance dashboards for retail shops and coffee kiosks with automated reporting and trend analysis.</p>
+                <p><strong>Impact:</strong> Improved inventory and sales decision-making.</p>
+                <div class="tags">
+                    <span>Excel Dashboards</span>
+                    <span>Data Visualization</span>
+                    <span>Business Intelligence</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Business Optimization Models</h4>
+                <p>Built optimization models using Excel Solver for pricing, resource allocation, staffing, and profit maximization.</p>
+                <p><strong>Impact:</strong> Delivered data-backed operational improvements for small businesses.</p>
+                <div class="tags">
+                    <span>Excel Solver</span>
+                    <span>Linear Programming</span>
+                    <span>Optimization</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Sales Commission Automation System</h4>
+                <p>Automated commission calculation and reporting system handling 18,000+ records with dynamic performance tracking.</p>
+                <div class="tags">
+                    <span>Excel VBA</span>
+                    <span>Automation</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <h3>Experience</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Field Engineer – Public Works</h4>
+                <p><strong>Kakamega County Government</strong> (2023)</p>
+                <p>Site supervision, materials tracking, quality control, and project reporting for public infrastructure.</p>
+            </div>
+            <div class="card">
+                <h4>Construction Assistant</h4>
+                <p><strong>Eco-Original Construction Agency</strong> (2022)</p>
+                <p>Project estimation, logistics, and site coordination support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <strong>Advanced Excel</strong><br>
+                <span style="color:var(--accent); font-size:13px;">Formulas • Pivot • Charts • Dashboards</span>
+            </div>
+            <div class="skill-card">
+                <strong>VBA & Macros</strong><br>
+                <span style="color:var(--accent); font-size:13px;">Automation • User Forms • Applications</span>
+            </div>
+            <div class="skill-card">
+                <strong>Power Query</strong><br>
+                <span style="color:var(--accent); font-size:13px;">ETL • Data Transformation • Scraping</span>
+            </div>
+            <div class="skill-card">
+                <strong>Statistical Modeling</strong><br>
+                <span style="color:var(--accent); font-size:13px;">Poisson • Monte Carlo Simulation</span>
+            </div>
+            <div class="skill-card">
+                <strong>Optimization</strong><br>
+                <span style="color:var(--accent); font-size:13px;">Excel Solver • Linear Programming</span>
+            </div>
+            <div class="skill-card">
+                <strong>Structural Analysis</strong><br>
+                <span style="color:var(--accent); font-size:13px;">MDM • SFD • BMD</span>
+            </div>
+            <div class="skill-card">
+                <strong>Data Visualization</strong><br>
+                <span style="color:var(--accent); font-size:13px;">Interactive Dashboards</span>
+            </div>
+            <div class="skill-card">
+                <strong>Engineering Tools</strong><br>
+                <span style="color:var(--accent); font-size:13px;">AutoCAD • ProtaStructure • BOQ</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <p style="text-align:center; font-size:17px; max-width:600px; margin:0 auto;">
+            <strong>Email:</strong> <a href="mailto:EMMAKOKHA@OUTLOOK.COM" style="color:var(--accent);">EMMAKOKHA@OUTLOOK.COM</a><br><br>
+            <strong>Phone:</strong> +254 115 922 595
+        </p>
+        <p style="text-align:center; margin-top:25px; color:var(--muted);">
+            Open to opportunities in Data Analysis, Automation, and Engineering Systems.
+        </p>
+    </section>
+
+    <footer>
+        © 2026 Erick Makokha. Engineering Logic × Advanced Analytics.<br>
+        <small>Turning complex data into actionable intelligence</small>
+    </footer>
+
+</body>
+</html>
